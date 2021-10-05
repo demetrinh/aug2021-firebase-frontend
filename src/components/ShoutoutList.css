@@ -1,0 +1,28 @@
+.ShoutoutList__list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Shoutout__listItem {
+  max-height: 600px;
+  width: 400px;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 9px;
+  padding-left: 15px;
+}
+
+.ShoutoutList__title {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.ShoutoutList__author {
+  font-weight: 500;
+}
+
+.ShoutoutList__image {
+  max-height: 250px;
+  max-width: 350px;
+}

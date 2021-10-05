@@ -8,24 +8,30 @@ const Header = () => {
 
   return (
     <header className="Header">
-      <h1>Shoutouts</h1>
+      <h1 className="Header__title">Shoutouts</h1>
       {user ? (
-        <div className="Header_signedIn">
+        <div className="Header__signedIn">
+          <p className="Header__userName">Welcome {user.displayName}</p>
           <p>
-            Welcome {user.displayName}
             {user.photoURL && (
               <img
-                className="Header_image"
+                className="Header__image"
                 src={user.photoURL}
                 alt={`${user.displayName}`}
               />
             )}
-            <button onClick={signOut}>Sign Out</button>
+          </p>
+          <p>
+            <button className="Header__signButton" onClick={signOut}>
+              Sign Out
+            </button>
           </p>
         </div>
       ) : (
         <div>
-          <button onClick={signInWithGoogle}>Sign In with Google</button>
+          <button className="Header__signButton" onClick={signInWithGoogle}>
+            Sign In with Google
+          </button>
         </div>
       )}
     </header>

@@ -8,14 +8,21 @@ interface Props {
 const ShoutoutList = ({ shoutouts }: Props) => {
   return (
     <div className="ShoutoutList">
-      <ul>
+      <ul className="ShoutoutList__list">
         {shoutouts.map((shoutout) => (
-          <li key={shoutout._id}>
-            <p>Shout out to {shoutout.title} </p>
-            <p>From: -{shoutout.author}</p>
+          <li className="Shoutout__listItem" key={shoutout._id}>
+            <p className="ShoutoutList__title">Shout out to {shoutout.title}</p>
+            <p>
+              From: -{" "}
+              <span className="ShoutoutList__author">{shoutout.author}</span>
+            </p>
             <p>{shoutout.message}</p>
             {shoutout.imageUrl && (
-              <img src={shoutout.imageUrl} alt={shoutout.message} />
+              <img
+                className="ShoutoutList__image"
+                src={shoutout.imageUrl}
+                alt={shoutout.message}
+              />
             )}
           </li>
         ))}
